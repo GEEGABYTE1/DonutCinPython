@@ -9,7 +9,7 @@ Python implemention of the popular "Donut.C" program in 2006. The donut behaves 
 ## Math Behind the Donut
 
 The intricate mathematics driving the donut animation involves trigonometry and parametric equations. Key parameters, including theta (θ), phi (φ), and various trigonometric functions, govern the positions of characters on the screen. The donut rotates by incrementing the values of A and B over time.
-### 1. Parametric Equations for a Torus
+### Parametric Equations for a Torus
 
 The parametric equations for a torus (donut) in 3D space define its coordinates based on the angles of rotation (\( \theta \) and \( \phi \)) and the major and minor radii (\( R \) and \( r \)):
 
@@ -17,7 +17,7 @@ $$\[ x(\theta, \phi) = (R + r \cos(\theta)) \cos(\phi) \]$$
 $$\[ y(\theta, \phi) = (R + r \cos(\theta)) \sin(\phi) \]$$
 $$\[ z(\theta, \phi) = r \sin(\theta) \]$$
 
-### 2. Rotation Matrix
+###  Rotation Matrix
 
 To simulate the rotation of the torus, rotation matrices are employed. These matrices allow for rotation about the x-axis $(\( R_x(\alpha) \))$, y-axis $(\( R_y(\beta) \))$, and z-axis $(\( R_z(\gamma) \))$:
 
@@ -27,14 +27,14 @@ $$\[ R_y(\beta) = \begin{bmatrix} \cos(\beta) & 0 & \sin(\beta) \\ 0 & 1 & 0 \\ 
 
 $$\[ R_z(\gamma) = \begin{bmatrix} \cos(\gamma) & -\sin(\gamma) & 0 \\ \sin(\gamma) & \cos(\gamma) & 0 \\ 0 & 0 & 1 \end{bmatrix} \]$$
 
-### 3. Coordinate Transformation
+###  Coordinate Transformation
 
 The original torus coordinates are transformed using the rotation matrices to obtain the rotated coordinates. The transformed coordinates are then projected onto the 2D screen using perspective projection:
 
 $$\[ x_{\text{new}} = x \cdot \cos(A) - y \cdot \sin(A) \]$$
 $$\[ y_{\text{new}} = x \cdot \sin(A) + y \cdot \cos(A) \]$$
 
-### 4. Luminance Index Calculation
+### Luminance Index Calculation
 
 To determine the brightness of each character on the screen, a luminance index is calculated ranging from $-\sqrt(2)$ to $\sqrt(2)$. This involves intricate computations of various trigonometric functions, adjusting for negative values and ensuring proper indexing.
 
