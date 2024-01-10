@@ -1,6 +1,6 @@
 # Donut.C in .py with RGB 🍩
 
-## Introduction
+
 
 Python implemention of the popular "Donut.C" program in 2006. The donut behaves like the donut in C, however, now has RGB colouring. 
 
