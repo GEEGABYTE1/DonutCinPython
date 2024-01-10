@@ -2,8 +2,9 @@
 
 ## Introduction
 
-Python implemention of the popular "Donut.C" program in 2006. The donut behaves like the donut in C, however, now has RGB colour. 
+Python implemention of the popular "Donut.C" program in 2006. The donut behaves like the donut in C, however, now has RGB colouring. 
 
+![Donut Animation](images/donut_animation.png)
 
 ## Math Behind the Donut
 
